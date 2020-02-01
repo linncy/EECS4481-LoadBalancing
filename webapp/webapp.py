@@ -36,7 +36,7 @@ def index():
     request_timestamp = time.time()
     count = redis.incr('requests', amount=1)
     compute_time = factorials()
-    redis.lpush('log', json.dumps([request_timestamp, compute_time]))
+    redis.lpush('log', json.dumps([count, request_timestamp, compute_time]))
     return json.dumps({'Request_Count': count, 'Compute_Time': compute_time, 'Container_Name':hostname})
 
 
