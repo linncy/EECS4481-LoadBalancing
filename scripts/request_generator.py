@@ -39,7 +39,7 @@ def send_request(user):
             r = requests.get('http://' + server_ip + ':8000/')
             data = r.json()
         except requests.exceptions.RequestException as e:
-            print('e')
+            print(e)
         end_time = time.time()
         time.sleep(interval)
         print("Response Time for {} = {}; Response JSON: {}".format(user, end_time - start_time, data))
