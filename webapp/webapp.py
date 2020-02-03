@@ -1,6 +1,6 @@
 """
 a simple Flask web application with a compute-intensive workload;
-return the number of requests it has received and the amount of time it took to solve the compute-intensive workload
+return the number of requests it has received, the amount of time it took to solve the compute-intensive workload, and the container hostname
 difficulty can be changed by defining the environmental variable FACTORIAL, default is 20000
 """
 
