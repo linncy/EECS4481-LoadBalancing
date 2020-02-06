@@ -10,4 +10,4 @@ It simulates a number of concurrent users sending requests to the web server.
 ### get_last_50_response_time_statistics.py
 Get the average, median, and standard deviation of the reponse time of the last 50 requests.
 
-```python3 et_last_50_response_time_statistics.py redis_ip redis_port(6379)```
+```python3 get_last_50_response_time_statistics.py redis_ip redis_port(6379)```
