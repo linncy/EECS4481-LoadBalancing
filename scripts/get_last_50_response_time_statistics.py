@@ -13,7 +13,6 @@ else:
     port = int(sys.argv[2])
 
 redis = Redis(host=redis_ip, port=port)
-redis.lrange('log',0 ,49)
 last_50_logs = [json.loads(item.decode()) for item in redis.lrange('log',0 ,49)]
 last_50_response_time = [item[2] for item in last_50_logs]
 print('Average: {}'.format(np.mean(last_50_response_time)))
